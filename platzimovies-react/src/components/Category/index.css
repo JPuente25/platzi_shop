@@ -1,0 +1,22 @@
+.category {
+   width: 45%;
+}
+
+.category-title {
+   margin-bottom: 8px;
+   cursor: pointer;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   width: max-content;
+}
+
+.category-title::before {
+   content: '••••';
+   color: transparent;
+   background-color: rgb(238, 167, 238);
+   border-radius: 8px;
+   margin-right: 8px;
+   width: 8px;
+   height: 8px;
+}

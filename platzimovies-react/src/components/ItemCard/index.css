@@ -1,0 +1,23 @@
+.card {
+   position: relative;
+   display: inline-block;
+   margin-right: 8px;
+   width: 150px;
+}
+
+.card img{
+   height: 225px;
+   min-height: 225px;
+   max-height: 225px;
+   width: 150px;
+   min-width: 150px;
+   max-width: 150px;
+}
+
+.card-like {
+   position: absolute;
+   bottom: 10px;
+   right: 10px;
+   background-color: green;
+   border-radius: 40%;
+}

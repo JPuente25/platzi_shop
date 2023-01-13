@@ -1,0 +1,35 @@
+.item-container {
+   padding: 0 24px;
+}
+
+.item-header {
+   margin: 12px 0px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.item-btn {
+   border-radius: 8px;
+   height: 32px;
+   width: 72px;
+}
+
+.item-list--movies {
+   display: flex;
+   max-width: 90%;
+   overflow-x: scroll;
+   overflow-y: hidden;
+   white-space: nowrap;
+   height: 260px;
+   padding-left: 24px;
+   padding-bottom: 16px;
+}
+
+.item-list--category {
+   display: grid;
+   grid-template-columns: 50% 50%;
+   gap: 10px;
+   align-items: center;
+}
+
