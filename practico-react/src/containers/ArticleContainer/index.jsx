@@ -4,7 +4,7 @@ import { CardSkeleton } from '../../components/skeletons/CardSkeleton';
 import { GridContainer } from './index.styled';
 
 const ArticleContainer = ({products, loading}) => {
-   const skeletonProducts = new Array(20).fill();
+   const skeletonProducts = new Array(20).fill(); //CREATES 20 ITEMS FOR LOADING SKELETONS
    return (
       <GridContainer>
          {!loading

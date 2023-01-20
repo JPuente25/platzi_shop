@@ -8,7 +8,7 @@ import { SaleIcon } from '../../assets/icons/SaleIcon';
 const Recovery = () => {
    const navigate = useNavigate();
 
-   const sendEmail = () => {
+   const sendEmail = () => { //GO TO EMAIL SENT PAGE
       navigate('/l/email-sent');
    }
 

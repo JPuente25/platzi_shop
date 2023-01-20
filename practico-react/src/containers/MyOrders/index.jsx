@@ -6,7 +6,7 @@ import { Context } from '../../context/context';
 const MyOrders = () => {
    const { state } = React.useContext(Context);
 
-   const myOrders = [
+   const myOrders = [ //AT THE MOMENT, ONLY TAKES 1 ORDER PACKAGE.
       [...state.cart],
    ];
    

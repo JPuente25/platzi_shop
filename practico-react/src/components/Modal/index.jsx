@@ -9,25 +9,27 @@ const Modal = () => {
    const navigate = useNavigate();
    const { setUserTokens, setUserData, toggleOrders, toggleModal } = React.useContext(Context);
 
-   const onOrders = () => {
-      (window.innerWidth >= 640)
-         ? onToggleOrders()
-         : openOrdersPage()
+   const onOrders = () => { //IF <640PX THEN OPEN ORDERS IN A PAGE, IF >640PX THEN OPEN A TAB ORDERS
+      if (window.innerWidth >= 640){
+         onToggleOrders()
+      } else {
+         openOrdersPage()
+      }
    };
 
-   const openOrdersPage = () => {
+   const openOrdersPage = () => { //OPENS AN ORDER PAGE
       navigate('/orders');
    };
 
-   const onToggleOrders = () => {
+   const onToggleOrders = () => { //TOGGLE ORDERS TAB
       toggleOrders();
    };
 
-   const closeMenu = () => {
+   const closeMenu = () => { //CLOSE MODAL
       toggleModal();
    };
 
-   const signOut = () => {
+   const signOut = () => { //LOGS OUT, SET NULL USERDATA AND TOKENS
       toggleModal();
       localStorage.clear();
       setUserTokens(null);
@@ -47,7 +49,7 @@ const Modal = () => {
                   >{item.text}</StyledLink >
             )}</Ul>
          <Ul>
-            <StyledLink className='menu' onClick={onOrders}>My Orders</StyledLink>
+            <StyledLink as='p' className='menu' onClick={onOrders}>My Orders</StyledLink>
             <StyledLink className='menu' onClick={closeMenu} to='/account'>My Account</StyledLink>
             <StyledLink className='menu' onClick={signOut} to='/login'>Sign out</StyledLink>
          </Ul>

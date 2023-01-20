@@ -13,3 +13,5 @@ export const getDateFormatted = () => {
    const formattedDate = `${day}.${month}.${year}`;
    return formattedDate;
 }
+
+//GET A STRING FOR ACTUAL DATE: dd.mm.yyyy

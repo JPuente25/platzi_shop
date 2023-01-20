@@ -2,18 +2,19 @@ import React from 'react';
 import { axiosGet } from '../api';
 
 const useGetAllUsers = () => {
-   const [ getAllUsers, setGetAllUsers ] = React.useState();
-   const [ loading, setLoading ] = React.useState(true);
-   React.useEffect( async () => {
+   const [ getAllUsers, setGetAllUsers ] = React.useState(); //MAIN STATE WILL BE EXPORTED AS DATA
+   const [ loading, setLoading ] = React.useState(true); //LOADER
+
+   React.useEffect( async () => { //AXIOS GET REQUEST: GETS ALL USER IN DATABASE
       try {
          const { data, statusText: status } = await axiosGet('/users');
          if (status === 'OK') {
-            console.log('entrando')
-            setGetAllUsers(data);
-            setLoading(false);
+            setGetAllUsers(data); //MAIN DATA
+            setLoading(false); //STOP LOADING
          }
       } catch (error) {
-         setGetAllUsers(error);
+         setGetAllUsers(error); //MANAGE ERRORS
+         setLoading(false); //STOP LOADING
       }
    }, []);
 

@@ -2,8 +2,8 @@ import React from 'react';
 import { axiosPut } from '../api';
 
 const useUpdateUser = (userData) => {
-   const [ updateUser, setUpdateUser ] = React.useState();
-   const [ loading, setLoading ] = React.useState(true);
+   const [ updateUser, setUpdateUser ] = React.useState(); //MAIN STATE WILL BE IMPORTED AS DATAA
+   const [ loading, setLoading ] = React.useState(true); //LOADER
    React.useEffect( async () => {
       if(userData){
          setLoading(true);
@@ -17,12 +17,12 @@ const useUpdateUser = (userData) => {
                }
             })
             if (status === 'OK') {
-               setUpdateUser(data);
-               setLoading(false);
+               setUpdateUser(data); //MAIN DATA
+               setLoading(false); //STOP LOADING
             }
          } catch (error) {
-            setUpdateUser(error);
-            setLoading(false);
+            setUpdateUser(error); //MANAGE ERRORS
+            setLoading(false); //STOP LOADING
          }
       }
       setLoading(false);

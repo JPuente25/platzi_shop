@@ -30,10 +30,12 @@ export const Ul = styled.ul`
 export const StyledLink = styled(Link)`
    color: ${black};
    text-decoration: none;
+   margin: 0;
    margin-bottom: 20px;
    display: inline-block;
    text-align: start;
    font-weight: bold;
+   cursor: pointer;
 
    &:nth-last-child(1).menu {
       color: ${hospital_green};

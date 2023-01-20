@@ -6,7 +6,7 @@ import { Button } from '../../components/Button/index.styled';
 const EmailSent = () => {  
    const navigate = useNavigate();
 
-   const goLogin = () => {
+   const goLogin = () => { //GO TO LOGIN PAGE
       navigate('/login');
    }
 

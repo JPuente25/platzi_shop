@@ -7,3 +7,5 @@ export const StyledMain = styled.main`
    align-items: ${props => props.type === 'home' ? 'auto' : 'center'};
    box-sizing: border-box;
 `;
+
+//VARIES ON HOME BECAUSE OF ORDERS TAB

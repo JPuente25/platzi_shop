@@ -8,6 +8,7 @@ import { Error, Msg } from './index.styled';
 const LoginPage = () => {
    const { state, removeError, removeMsg } = React.useContext(Context);
 
+   //REMOVES ERROR '001' AND MSG 'A01' AFTER 3 SECONDS
    React.useEffect(() => {
       setTimeout(() => {
          removeError('001');

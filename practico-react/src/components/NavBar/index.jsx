@@ -10,25 +10,25 @@ import { useNavigate } from 'react-router-dom';
 export const NavBar = () => {
    const navigate = useNavigate();
    const {state, toggleModal, toggleOrders} = React.useContext(Context);
-   const cartItems = state.cart.length;
+   const cartItems = state.cart.length; //NUMBER OF ITEMS IN CART
 
-   const openMenu = () => {
+   const openMenu = () => { //OPENS MENU MODAL
       toggleModal(prev => !prev);
    }
 
-   const onMenuAction = () => {
-      if(state.userData) {
-         if (window.innerWidth > 640) {
+   const onMenuAction = () => { //LOGO BEHAVIOR: IN >640PX ACTS AS A MENU MODAL TOGGLE, IN <640PX ACTS AS A 
+      if(state.userData) { 
+         if (window.innerWidth > 640) { //IF LOGGED IN AND >640PX, ACTS AS A MENU MODAL TOGGLE
             openMenu();
-         } else {
+         } else { //IF LOGGED IN AND <640PX, ACTS AS A HOME REDIRECT
             navigate('/');
          }
-      } else if (!state.userData || window.innerWidth <= 640) {
+      } else if (!state.userData) { //IF NOT LOGGED , ACTS AS A LOGIN REDIRECT
          navigate('/login');
       }
    }
 
-   const onOrders = () => {
+   const onOrders = () => { // ON >640PX OPENS AN ORDERS TAB, ON <640PX OPENS AN ORDERS PAGES
       (window.innerWidth >= 640)
          ? onToggleOrders()
          : openOrdersPage()

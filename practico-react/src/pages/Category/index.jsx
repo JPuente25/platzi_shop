@@ -13,7 +13,7 @@ const Category = () => {
    const { state } = React.useContext(Context);
 
    const { categoryProducts, loading } = useGetCategoryProducts(categoryId);
-   const error = categoryProducts?.name === 'AxiosError';
+   const error = categoryProducts?.name === 'AxiosError'; //CREATES ERROR MSG IF THERE IS ANY ERROR
 
    return (
       <StyledMain type='home'>

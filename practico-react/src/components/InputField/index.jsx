@@ -1,8 +1,8 @@
 import React from 'react';
 import { Field, Input, Label } from './index.styled';
 
-const InputField = ({ label, input }) => {
-   return (
+//COMPONENT FOR A FIELD WITH LABEL AND INPUT CONFIGURED EACH OTHER
+const InputField = ({ label, input }) => (
       <Field>
          <Label htmlFor={label.htmlFor}>{label.text}</Label>
 
@@ -15,6 +15,5 @@ const InputField = ({ label, input }) => {
          />
       </Field>
    );
-};
 
 export { InputField };

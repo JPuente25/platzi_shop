@@ -8,7 +8,7 @@ import { useGetProductById } from '../../utils/hooks/useGetProductById';
 const Article = () => {
    const params = useParams();
    const { product, loading } = useGetProductById(parseInt(params.id));
-   const error = product?.name === 'AxiosError';
+   const error = product?.name === 'AxiosError'; // CREATES ERROR MSG IF THERE IS ANY ERROR
 
    console.log(product);
    return (

@@ -6,7 +6,7 @@ import { TitleContainer, TotalBox } from './index.styled';
 
 
 const CheckoutOrder = ({order}) => {
-   const totalPrice = myOrder.reduce((a, b) => a + b.price, 0);
+   const totalPrice = myOrder.reduce((a, b) => a + b.price, 0); //CALCULATES TOTAL PRICE
    
    return (
       <OrderContainer>

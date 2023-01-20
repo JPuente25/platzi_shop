@@ -14,21 +14,21 @@ const ExistingAccount = () => {
    const [tempData, setTempData] = React.useState(state.userData);
    const [existData, setExistData] = React.useState(null);
 
-   const { updateUser, loading } = useUpdateUser(existData);
+   const { updateUser, loading } = useUpdateUser(existData); //UPDATES AN USER GIVEN (HOOK API)
 
-   const onCreateUser = (e) => {
+   const onCreateUser = (e) => { //ON SUBMIT, SAVES DATA FROM FORMULARY TO STATE
       e.preventDefault();
       setExistData(tempData);
    };
 
-   const onNameChange = (e) => {
+   const onNameChange = (e) => { //HANDLE NAME INPUT
       setTempData({
          ...tempData,
          name: e.target.value,
       });
    };
 
-   const onPasswordChange = (e) => {
+   const onPasswordChange = (e) => { //HANDLE PASSWORD INPUT
       setTempData({
          ...tempData,
          password: e.target.value,

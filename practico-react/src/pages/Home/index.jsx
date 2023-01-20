@@ -10,7 +10,7 @@ import { MyOrdersContainer } from './index.styled';
 const Home = () => {
    const { state } = React.useContext(Context);
    const { products, loading } = useGetProducts();
-   const error = products?.name === 'AxiosError';
+   const error = products?.name === 'AxiosError'; //CREATES ERROR MSG IF THERE IS ANY ERROR
    return (
       <StyledMain type='home'>
          {!error && <ArticleContainer products={products} loading={loading}/>}

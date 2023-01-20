@@ -13,11 +13,11 @@ const Login = () => {
    const { auth, setRender } = useAuth(userInfo); 
    const { state, clearError } = React.useContext(Context);
    
-   const goSignup = () => {
+   const goSignup = () => { //GO NEW ACCOUNT PAGE
       navigate('/account/new');
    }
    
-   const getFormData = (e) => {
+   const getFormData = (e) => { //SAVES FORM DATA IN STATE
       e.preventDefault();
       const formData = new FormData(e.target);
       const data = {
@@ -25,7 +25,7 @@ const Login = () => {
          password: formData.get('password'),
       }
       setUserInfo(data);
-      setRender(data);
+      setRender(data); //CHANGES RENDER STATE FROM HOOK TO LET USEEFFECT ACTIVATES AGAIN
    }
 
    return (

@@ -1,26 +1,26 @@
 import React from "react";
 
 const initialValue = {
-   modal: false,
+   modal: false, //MODAL TAB ON MENU
    cart: [],
-   orders: false,
-   userData: null,
-   userTokens: JSON.parse(localStorage.getItem('sale_user_session')),
-   error: [],
-   msg: [],
+   orders: false, //ORDERS TAB ON > 640PX
+   userData: null, //DATA TO KNOW IF PERSISTED ACCESS TOKEN IS VALID
+   userTokens: JSON.parse(localStorage.getItem('sale_user_session')), 
+   error: [], //ERRORS
+   msg: [], //SUCCESS
 };
 
 export const useInitialValue = () => {
    const [state, setState] = React.useState(initialValue);
 
-   const addToCart = (payload) => {
+   const addToCart = (payload) => { //ADD A PRODUCT TO CART
       setState({
          ...state,
          cart: [...state.cart, payload],
       });
    };
 
-   const deleteFromCart = (payload) => {
+   const deleteFromCart = (payload) => { //DELETE A PRODUCT FROM CART
       const newCart = state.cart.filter(item => item.id !== payload);
       setState({
          ...state,
@@ -28,36 +28,35 @@ export const useInitialValue = () => {
       });
    };
 
-   const toggleModal = () => {
+   const toggleModal = () => { //ENABLE MODAL TAB
       setState({
          ...state,
          modal: !state.modal
       });
    };
 
-   const toggleOrders = () => {
+   const toggleOrders = () => { //ENABLE ORDERS TAB
       setState({
          ...state,
          orders: !state.orders
       });
    };
 
-   const setUserData = (payload) => {
+   const setUserData = (payload) => { //SAVES USER DATA
       setState({
          ...state,
          userData: payload,
       });
    };
 
-   const setUserTokens = (payload) => {
+   const setUserTokens = (payload) => { //SAVE USER TOKENS
       setState({
          ...state,
          userTokens: payload,
       });
    };
-
    
-   const addError = (payload) => {
+   const addError = (payload) => { //ADDS AN ERROR 
       if (!state.error.includes(payload)){
          setState({
             ...state,
@@ -66,7 +65,7 @@ export const useInitialValue = () => {
       }
    };
 
-   const removeError = (payload) => {
+   const removeError = (payload) => { //REMOVES AN ERROR
       if (state.error.includes(payload)) {
          const errorIndex = state.error.indexOf(payload);
          state.error.splice(errorIndex, 1);
@@ -77,7 +76,7 @@ export const useInitialValue = () => {
       }
    };
 
-   const addMsg = (payload) => {
+   const addMsg = (payload) => { //ADDS A SUCESS MSG
       if (!state.msg.includes(payload)){
          setState({
             ...state,
@@ -86,7 +85,7 @@ export const useInitialValue = () => {
       }
    };
 
-   const removeMsg = (payload) => {
+   const removeMsg = (payload) => { //REMOVES A SUCESS MSG
       if (state.msg.includes(payload)) {
          const msgIndex = state.msg.indexOf(payload);
          state.msg.splice(msgIndex, 1);

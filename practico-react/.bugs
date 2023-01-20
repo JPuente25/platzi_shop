@@ -1,0 +1,3 @@
+-- Al tener mal usuario y clave, y luego registrar un usuario, no se quita usuario y clave invalidos
+-- Al darle enter, no hace submit automatico
+-- Al abrir Orders en Mobile, no se cierra el modal

@@ -3,20 +3,19 @@ import { ArticlesContainer, More, OrderContainer, Title, Total } from './index.s
 import { Card } from '../Card';
 import { getDateFormatted } from '../../utils/functions/getDateFormatted';
 import { Context } from '../../context/context';
-import { CardSkeleton } from '../skeletons/CardSkeleton';
 
 const Order = () => {
    const { state } = React.useContext(Context);
    const [showMore, setShowMore] = React.useState(false);
-   const price = state.cart.reduce((a, b) => {
+   const price = state.cart.reduce((a, b) => { //CALCULATES TOTAL PRICE
       return a + b.price;
    }, 0);
 
-   const date = getDateFormatted();
+   const date = getDateFormatted(); //GETS DATE ON PERSONALIZED FORMAT
 
-   const qty = state.cart.length;
+   const qty = state.cart.length; //GET NUMBER OF ITEMS IN CART
 
-   const onShowMore = () => {
+   const onShowMore = () => { //LET SEE ALL ITEMS IN ORDER
       setShowMore(prev => !prev)};
 
    return (
