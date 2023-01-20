@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.js": "/practico-react/static/js/main.2a7af43d.js",
+    "main.js": "/practico-react/static/js/main.ba0e26d4.js",
     "static/media/sale.svg": "/practico-react/static/media/sale.8fb34a907f4bcc32a4f85be955476bd6.svg",
     "static/media/cart.svg": "/practico-react/static/media/cart.7d9062e959547fd4d2c99abf1e3b6074.svg",
     "index.html": "/practico-react/index.html",
     "static/media/close.svg": "/practico-react/static/media/close.28b0fb5172fb0f5d98c420cc46308aee.svg",
     "static/media/menu.svg": "/practico-react/static/media/menu.22486cec6e43ee73e5a257ab454740c0.svg",
-    "main.2a7af43d.js.map": "/practico-react/static/js/main.2a7af43d.js.map"
+    "main.ba0e26d4.js.map": "/practico-react/static/js/main.ba0e26d4.js.map"
   },
   "entrypoints": [
-    "static/js/main.2a7af43d.js"
+    "static/js/main.ba0e26d4.js"
   ]
 }
